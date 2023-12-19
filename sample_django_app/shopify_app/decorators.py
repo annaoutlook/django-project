@@ -26,6 +26,8 @@ def session_token_required(func):
     return wrapper
 
 
+
+
 def shopify_session(session_token):
     shopify_domain = session_token.get("dest").removeprefix("https://")
     api_version = apps.get_app_config("shopify_app").SHOPIFY_API_VERSION
